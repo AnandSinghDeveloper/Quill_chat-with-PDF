@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import PreviewImge from "../../public/dashboard-preview.jpg";
+import UploadngPreview from "../../public/file-upload-preview.jpg";
 
 export default function Home() {
   return (
@@ -75,6 +76,96 @@ export default function Home() {
             />
           </div>
         </div>
+      </div>
+
+      <div className=" mx-auto mb-32 mt-32 sm:mt-56 max-w-5xl">
+        <div className=" mb-12 px-6 sm:px-8">
+          <div className="sm:text-center max-w-2xl mx-auto">
+            <h2 className=" mt-2 text-4xl font-bold  text-gray-900 sm:text-5xl">
+              Start chatting in minutes
+            </h2>
+            <p className=" mt-4 text-lg text-gray-600">
+              Chating to your PDF files is never been easier then with quill
+            </p>
+          </div>
+        </div>
+
+        <ol className=" my-8 space-y-4 pt-8 md:flex md:space-y-0 md:space-x-12">
+          <li className=" md:flex-1">
+            <div className=" flex flex-col border-l-4 border-zinc-300 space-y-2 pl-4 py-2  md:pt-4 md:border-t-2 md:pb-0 md:pl-0 md:border-l-0">
+              <span className="text-sm font-medium text-blue-600 ">
+                {" "}
+                Step 1
+              </span>
+              <span className=" text-xl font-semibold ">
+                Sign up fon an account
+              </span>
+              <span className=" mt-2  text-gray-700">
+                {" "}
+                Either staring out with a free plan or choosing{" "}
+                <Link
+                  href={"/pricing"}
+                  className=" text-blue-700 underline underline-offset-2"
+                >
+                  {" "}
+                  pro plan
+                </Link>
+                .
+              </span>
+            </div>
+          </li>
+
+          <li className=" md:flex-1">
+            <div className=" flex flex-col border-l-4 border-zinc-300 space-y-2 pl-4 py-2  md:pt-4 md:border-t-2 md:pb-0 md:pl-0 md:border-l-0">
+              <span className="text-sm font-medium text-blue-600 ">
+                {" "}
+                Step 2
+              </span>
+              <span className=" text-xl font-semibold ">
+                {" "}
+                Upload your PDF file{" "}
+              </span>
+              <span className=" mt-2  text-gray-700">
+                {" "}
+                We&apos;ll process your file and get it ready for you to start
+                chatting.
+              </span>
+            </div>
+          </li>
+
+          <li className=" md:flex-1">
+            <div className=" flex flex-col border-l-4 border-zinc-300 space-y-2 pl-4 py-2  md:pt-4 md:border-t-2 md:pb-0 md:pl-0 md:border-l-0">
+              <span className="text-sm font-medium text-blue-600 ">
+                {" "}
+                Step 3
+              </span>
+              <span className=" text-xl font-semibold ">
+                {" "}
+                Start asking questions{" "}
+              </span>
+              <span className=" mt-2  text-gray-700">
+                {" "}
+                It&apos;s that easy. Try out quill today - you won&apos;t regret
+                it.{" "}
+              </span>
+            </div>
+          </li>
+        </ol>
+
+           <div className=" mx-auto  px-6 lg:px-8 max-w-6xl">
+              <div className=" mt-16 sm:mt-24 flow-root ">
+                <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10  lg:-m-4 lg:rounded-2xl lg:p-4">
+                  <Image
+                    width={1419}
+                    height={732}
+                    src={UploadngPreview}
+                    alt="Uploadng Preview"
+                    className=" rounded-md bg-white p-2 sm:p-8 md:p-20 ring-1 ring-gray-900/10 shadow-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+
       </div>
     </>
   );
