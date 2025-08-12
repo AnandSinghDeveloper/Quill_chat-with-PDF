@@ -1,0 +1,19 @@
+import React from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
+
+const Authcallback = () => {
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+   const origin = searchParams.get('origin');
+
+
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Authcallback

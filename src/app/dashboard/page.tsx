@@ -1,18 +1,15 @@
 // "use client"
 
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { redirect } from "next/navigation";
 
 const Dashboard = async () => {
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
 
-  const {getUser}= getKindeServerSession()
+  if (!user || !user.id) redirect("/auth-callback?origin=dashboard");
 
-  const user = await getUser()
+  return <div>{user?.email}</div>;
+};
 
-  return (
-    <div>
-     {user?.email}
-    </div>
-  )
-}
-
-export default Dashboard
+export default Dashboard;
